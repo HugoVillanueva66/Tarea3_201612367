@@ -1,0 +1,21 @@
+package tarea3_201612367;
+import java.util.Scanner;
+public class Tarea3_201612367 {
+
+    public static void main(String[] args) { //Codigo para salir del sistema
+        Scanner entrada = new Scanner(System.in);
+        Menu objMenu=new Menu();
+        Funcion objFuncion=new Funcion();
+        int intFuncion=-1;
+        Boolean Salir=false;
+        while(Salir==false){
+            intFuncion=objMenu.ImprimeMenu(entrada);
+            if(intFuncion==1){
+                System.out.println("Fin del Programa."); //Mensaje Final
+                break;
+            }
+            objFuncion.ProcesarFuncion(intFuncion, entrada);
+        }  // TODO code application logic here
+    }
+    
+}
